@@ -1,0 +1,10 @@
+The algorithm begins by acquiring video signals from the camera. Search for a pre-decided template is then initiated. This search and
+identify algorithm works using correlation. For a matched template, highest correlation is achieved. If the match is found, a ROI box
+is drawn around the matched template. If the match is not found, the search window is moved and the process of search for another 
+match continues. A timer is incremented to calculate matched consecutive templates. For short blink (<800 ms) or long blink 
+(>1.2 sec), the program uses pyautogui module to simulate key press and key release on the processor.
+A short blink is used to navigate through the GUI and a long blink selects the highlighted option.
+A SQL database is checked continuously for change in variables. When the user selects fan/light to be switched on/off, 
+control signals are sent to the Microcontroller wirelessly via ZigBee module. When the user selects SMS option,
+python opens way2sms.com in the browser window and a text message is sent to the caregiver’s mobile.
+If the user terminates the program, the search is stopped and the program exits. 
